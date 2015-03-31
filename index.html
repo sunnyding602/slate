@@ -1,0 +1,578 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="javascripts/all.js" type="text/javascript"></script>
+
+      <script>
+        $(function() {
+          setupLanguages(["shell"]);
+        });
+      </script>
+  </head>
+
+  <body class="index">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img width="230" height="52" src="images/logo.png" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='http://sunnyflute.com'>Powered by 计算机界大龄竹笛少年</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id="introduction">Introduction</h1>
+
+<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+
+<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+
+<p>This example API documentation page was created with <a href="http://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&rsquo;s documentation.</p>
+
+<h1 id="authentication">Authentication</h1>
+
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<pre><code class="highlight shell"><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"api_endpoint_here"</span>
+  -H <span class="s2">"Authorization: meowmeowmeow"</span>
+</code></pre>
+
+<blockquote>
+<p>Make sure to replace <code class="prettyprint">meowmeowmeow</code> with your API key.</p>
+</blockquote>
+
+<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+
+<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+
+<p><code class="prettyprint">Authorization: meowmeowmeow</code></p>
+
+<aside class="notice">
+You must replace `meowmeowmeow` with your personal API key.
+</aside>
+
+<h1 id="折扣app">折扣App</h1>
+
+<h2 id="获取首页幻灯">获取首页幻灯</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_slide"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"product"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h1</span><span class="p">:</span><span class="w"> </span><span class="s2">"上海直飞毛里求斯8天5晚自由行"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h2</span><span class="p">:</span><span class="w"> </span><span class="s2">"3月 4月 5月"</span><span class="p">,</span><span class="w">
+      </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1999"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/9991/?source=app"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imageUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/picstock/2014/09/12/14105177482165?imageView2/2/w/310"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"product"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h1</span><span class="p">:</span><span class="w"> </span><span class="s2">"Beijing飞东京6天5晚自由行"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h2</span><span class="p">:</span><span class="w"> </span><span class="s2">"4月 "</span><span class="p">,</span><span class="w">
+      </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"7999"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/23840/?source=app"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imageUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/picstock/2014/10/08/14127635005094?imageView2/2/w/310"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"product"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h1</span><span class="p">:</span><span class="w"> </span><span class="s2">"北京直飞南极8天8晚自由行"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h2</span><span class="p">:</span><span class="w"> </span><span class="s2">"3月 4月 6月 7月 8月 9月 10月 11月 12月"</span><span class="p">,</span><span class="w">
+      </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"98765"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/10121/?source=app"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imageUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/picstock/2014/09/12/14105129438674?imageView2/2/w/310"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imageUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/picstock/2014/09/12/14105129438674?imageView2/2/w/310"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/weixin/score.php?campaign=apppromotion&amp;category=h5top&amp;source=app"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all data home page need.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://open.qyer.com/lastminute/app_slide</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<p><code class="prettyprint">不需要参数</code></p>
+
+<aside class="success">
+Remember — 之前的参数是得传的, 例如: 
+oauth_token=33e4fcb72b252089930b65b4187cbf34
+&client_secret=44c86dbde623340b5e0a
+&client_id=qyer_discount_ios
+&track_app_version=1.6.3
+&track_os=ios%25208.2
+&app_installtime=1421109485
+&track_app_channel=App%2520Store
+&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
+&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
+&track_user_id=5443973
+&size=640x1136
+</aside>
+
+<h2 id="获取首页产品分类">获取首页产品分类</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_productType"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"自由行"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a4c9210409.png"</span><span class="p">,</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"label"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"机票"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a4c900b00d.png"</span><span class="p">,</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"label"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"酒店"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a4c8c84a56.png"</span><span class="p">,</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"label"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"签证"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a4c8a4fbfd.png"</span><span class="p">,</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"label"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"更多"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a4c887b847.png"</span><span class="p">,</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"more"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all data home page need.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://open.qyer.com/lastminute/app_productType</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<p><code class="prettyprint">不需要参数</code></p>
+
+<aside class="success">
+Remember — 之前的参数是得传的, 例如: 
+oauth_token=33e4fcb72b252089930b65b4187cbf34
+&client_secret=44c86dbde623340b5e0a
+&client_id=qyer_discount_ios
+&track_app_version=1.6.3
+&track_os=ios%25208.2
+&app_installtime=1421109485
+&track_app_channel=App%2520Store
+&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
+&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
+&track_user_id=5443973
+&size=640x1136
+</aside>
+
+<h2 id="获取专题-可用于首页">获取专题-可用于首页</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_popCampaign"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a4f2fb20d7.png"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/10057/?source=app"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a4f2d8f274.png"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/9993/?source=app"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a4f2b8dd92.png"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/9865/?source=app"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all data home page need.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://open.qyer.com/lastminute/app_popCampaign?page=&lt;page&gt;&amp;pageSize=&lt;pageSize&gt;</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<p><code class="prettyprint">不需要参数</code></p>
+
+<aside class="success">
+Remember — 之前的参数是得传的, 例如: 
+oauth_token=33e4fcb72b252089930b65b4187cbf34
+&client_secret=44c86dbde623340b5e0a
+&client_id=qyer_discount_ios
+&track_app_version=1.6.3
+&track_os=ios%25208.2
+&app_installtime=1421109485
+&track_app_channel=App%2520Store
+&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
+&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
+&track_user_id=5443973
+&size=640x1136
+</aside>
+
+<h2 id="获取精选商品-可用于首页">获取精选商品-可用于首页</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_selectedProduct?page=1&amp;pageSize=10"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a4f2fb20d7.png"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/10057/?source=app"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a4f2d8f274.png"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/9993/?source=app"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a4f2b8dd92.png"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/9865/?source=app"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all data home page need.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://open.qyer.com/lastminute/app_popCampaign</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必须</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>page</td>
+<td>int</td>
+<td>否</td>
+<td>1</td>
+<td>展示第几页数据</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>int</td>
+<td>否</td>
+<td>10</td>
+<td>每页展示多少条数据</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — 之前的参数是得传的, 例如: 
+oauth_token=33e4fcb72b252089930b65b4187cbf34
+&client_secret=44c86dbde623340b5e0a
+&client_id=qyer_discount_ios
+&track_app_version=1.6.3
+&track_os=ios%25208.2
+&app_installtime=1421109485
+&track_app_channel=App%2520Store
+&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
+&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
+&track_user_id=5443973
+&size=640x1136
+</aside>
+
+<h2 id="发现页混排列表">发现页混排列表</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_discover?page=1&amp;pageSize=10"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"product"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h1</span><span class="p">:</span><span class="w"> </span><span class="s2">"0上海直飞毛里求斯8天5晚自由行"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"ziyouxing"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h2</span><span class="p">:</span><span class="w"> </span><span class="s2">"3月 4月 5月"</span><span class="p">,</span><span class="w">
+      </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1999"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/9991/?source=app"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imageUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/picstock/2014/09/12/14105177482165?imageView2/2/w/310"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"product"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h1</span><span class="p">:</span><span class="w"> </span><span class="s2">"1Beijing飞东京6天5晚酒店"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"jiudian"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h2</span><span class="p">:</span><span class="w"> </span><span class="s2">"4月 "</span><span class="p">,</span><span class="w">
+      </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"7999"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/23840/?source=app"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imageUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/picstock/2014/10/08/14127635005094?imageView2/2/w/310"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"product"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h1</span><span class="p">:</span><span class="w"> </span><span class="s2">"2北京直飞南极8天8晚签证"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"qianzheng"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h2</span><span class="p">:</span><span class="w"> </span><span class="s2">"3月 4月 6月 7月 8月 9月 10月 11月 12月"</span><span class="p">,</span><span class="w">
+      </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"98765"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/10121/?source=app"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imageUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/picstock/2014/09/12/14105129438674?imageView2/2/w/310"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imageUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/picstock/2014/09/12/14105129438674?imageView2/2/w/310"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/weixin/score.php?campaign=apppromotion&amp;category=h5top&amp;source=app"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"product"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h1</span><span class="p">:</span><span class="w"> </span><span class="s2">"4上海直飞毛里求斯8天5晚自由行"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"ziyouxing"</span><span class="p">,</span><span class="w">
+      </span><span class="err">h2</span><span class="p">:</span><span class="w"> </span><span class="s2">"3月 4月 5月"</span><span class="p">,</span><span class="w">
+      </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1999"</span><span class="p">,</span><span class="w">
+      </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/9991/?source=app"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imageUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/picstock/2014/09/12/14105177482165?imageView2/2/w/310"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all data home page need.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://open.qyer.com/lastminute/app_discover?page=&lt;page&gt;&amp;pageSize=&lt;pageSize&gt;</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必须</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>page</td>
+<td>int</td>
+<td>否</td>
+<td>1</td>
+<td>展示第几页数据</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>int</td>
+<td>否</td>
+<td>10</td>
+<td>每页展示多少条数据</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+为了展示美观, 样本返回数据只展示了不多的几条数据
+</aside>
+
+<aside class="success">
+Remember — 之前的参数是得传的, 例如: 
+oauth_token=33e4fcb72b252089930b65b4187cbf34
+&client_secret=44c86dbde623340b5e0a
+&client_id=qyer_discount_ios
+&track_app_version=1.6.3
+&track_os=ios%25208.2
+&app_installtime=1421109485
+&track_app_channel=App%2520Store
+&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
+&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
+&track_user_id=5443973
+&size=640x1136
+</aside>
+
+<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_home"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Isis"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves a specific kitten.</p>
+
+<aside class="warning">If you&rsquo;re not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://example.com/kittens/&lt;ID&gt;</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the cat to retrieve</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>include_cats</td>
+<td>false</td>
+<td>If set to true, the result will also include cats.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include kittens that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="errors">Errors</h1>
+
+<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request &ndash; Your request sucks</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized &ndash; Your API key is wrong</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found &ndash; The specified kitten could not be found</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone &ndash; The kitten requested has been removed from our servers</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&rsquo;m a teapot</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slown down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
