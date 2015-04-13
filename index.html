@@ -360,6 +360,991 @@ oauth_token=33e4fcb72b252089930b65b4187cbf34
 &size=640x1136
 </aside>
 
+<h2 id="获取分类页的分类">获取分类页的分类</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_category"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"info"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"times"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1016</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fightTicket"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"机票"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1017</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotel"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"酒店"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1018</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"diyTour"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"自由行"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1020</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ship"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"邮轮"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1785</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"签证"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1983</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localTour"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"当地游"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1049</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"insurance"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"保险"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1021</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"carRental"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"租车"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2161</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"euroTrainTicket"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"欧铁票"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1050</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ticketEtc"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"门票及其他"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://open.qyer.com/lastminute/app_category</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<p><code class="prettyprint">不需要参数</code></p>
+
+<aside class="notice">
+为了展示美观, 样本返回数据只展示了不多的几条数据
+</aside>
+
+<aside class="notice">
+_comment字段中的数据仅仅是注释, 请勿使用
+</aside>
+
+<aside class="success">
+Remember — 之前的参数是得传的, 例如: 
+oauth_token=33e4fcb72b252089930b65b4187cbf34
+&client_secret=44c86dbde623340b5e0a
+&client_id=qyer_discount_ios
+&track_app_version=1.6.3
+&track_os=ios%25208.2
+&app_installtime=1421109485
+&track_app_channel=App%2520Store
+&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
+&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
+&track_user_id=5443973
+&size=640x1136
+</aside>
+
+<h2 id="获取搜索热词">获取搜索热词</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_hot_searched_words"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"邮轮"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"租车"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"保险"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"当地游"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"欧铁票"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"香港"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"台湾"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"泰国"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"日本"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"韩国"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"新加坡"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"马尔代夫"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"澳大利亚"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://open.qyer.com/lastminute/app_hot_searched_words</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<p><code class="prettyprint">不需要参数</code></p>
+
+<aside class="notice">
+为了展示美观, 样本返回数据只展示了不多的几条数据
+</aside>
+
+<aside class="success">
+Remember — 之前的参数是得传的, 例如: 
+oauth_token=33e4fcb72b252089930b65b4187cbf34
+&client_secret=44c86dbde623340b5e0a
+&client_id=qyer_discount_ios
+&track_app_version=1.6.3
+&track_os=ios%25208.2
+&app_installtime=1421109485
+&track_app_channel=App%2520Store
+&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
+&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
+&track_user_id=5443973
+&size=640x1136
+</aside>
+
+<h2 id="获取用户订单列表">获取用户订单列表</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_get_userorderformlist?oauth_token=e458c75b658c5252c4c115ca737b2053&amp;client_secret=44c86dbde623340b5e0a&amp;client_id=qyer_discount_ios&amp;track_app_version=1.6.3&amp;is_show_supplier=1&amp;is_show_pay=1&amp;page=1&amp;track_os=ios%25208.3&amp;app_installtime=1421109485&amp;track_app_channel=App%2520Store&amp;track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03&amp;track_user_id=5287911&amp;count=5&amp;track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">pager</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div class="</span><span class="err">ui_page</span><span class="s2">"&gt;&lt;a data-bn-ipg="</span><span class="err">pages</span><span class="mi">-3</span><span class="s2">" href="</span><span class="err">javascript:</span><span class="w"> </span><span class="err">orderlistpage(</span><span class="mi">1</span><span class="err">)</span><span class="s2">" class='ui_page_item ui_page_item_current'&gt;1&lt;/a&gt; &lt;a data-bn-ipg="</span><span class="err">pages</span><span class="mi">-3</span><span class="s2">" href="</span><span class="err">javascript:</span><span class="w"> </span><span class="err">orderlistpage(</span><span class="mi">2</span><span class="err">)</span><span class="s2">" class='ui_page_item'&gt;2&lt;/a&gt; &lt;a data-bn-ipg="</span><span class="err">pages</span><span class="mi">-5</span><span class="s2">" href="</span><span class="err">javascript:</span><span class="w"> </span><span class="err">orderlistpage(</span><span class="mi">2</span><span class="err">)</span><span class="s2">" class='ui_page_item ui_page_next' title="</span><span class="err">下一页</span><span class="s2">"&gt;下一页&lt;/a&gt; &lt;/div&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="err">counts</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w">
+        </span><span class="err">res</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"1996795720"</span><span class="p">,</span><span class="w">
+                </span><span class="err">lid</span><span class="p">:</span><span class="w"> </span><span class="s2">"10207"</span><span class="p">,</span><span class="w">
+                </span><span class="err">pid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1292"</span><span class="p">,</span><span class="w">
+                </span><span class="err">cid</span><span class="p">:</span><span class="w"> </span><span class="s2">"5836"</span><span class="p">,</span><span class="w">
+                </span><span class="err">sid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                </span><span class="err">num</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                </span><span class="err">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"小美"</span><span class="p">,</span><span class="w">
+                </span><span class="err">phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"18500192024"</span><span class="p">,</span><span class="w">
+                </span><span class="err">email</span><span class="p">:</span><span class="w"> </span><span class="s2">"sunnyding602@qq.com"</span><span class="p">,</span><span class="w">
+                </span><span class="err">uid</span><span class="p">:</span><span class="w"> </span><span class="s2">"5287911"</span><span class="p">,</span><span class="w">
+                </span><span class="err">unit_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.01"</span><span class="p">,</span><span class="w">
+                </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.01"</span><span class="p">,</span><span class="w">
+                </span><span class="err">payment</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">datetime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428547655"</span><span class="p">,</span><span class="w">
+                </span><span class="err">firstpay</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                </span><span class="err">relid</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">buyer_email</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">buyer_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">notify_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">notify_time</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">notify_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">payment_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">seller_email</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">seller_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">sign</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">sign_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">total_fee</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">trade_no</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">trade_status</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">return_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">return_time</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">channel</span><span class="p">:</span><span class="w"> </span><span class="s2">"ios"</span><span class="p">,</span><span class="w">
+                </span><span class="err">guid</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">confirmstatus</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">rooms</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">msg</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_status</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_return_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_deal_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_reason</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_verify_reason</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_error</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">track_deviceid</span><span class="p">:</span><span class="w"> </span><span class="s2">"8EF77D0C-5531-4CD9-8176-6EDC49FFEC03"</span><span class="p">,</span><span class="w">
+                </span><span class="err">lastalipaydatetime</span><span class="p">:</span><span class="w"> </span><span class="mi">1428547955</span><span class="p">,</span><span class="w">
+                </span><span class="err">lastminute_title</span><span class="p">:</span><span class="w"> </span><span class="s2">"409秒杀LM"</span><span class="p">,</span><span class="w">
+                </span><span class="err">lastminute_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+                </span><span class="err">products_type</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">products_title</span><span class="p">:</span><span class="w"> </span><span class="s2">"1111"</span><span class="p">,</span><span class="w">
+                </span><span class="err">alipay_account</span><span class="p">:</span><span class="w"> </span><span class="s2">"raffi@126.com"</span><span class="p">,</span><span class="w">
+                </span><span class="err">supplier_title</span><span class="p">:</span><span class="w"> </span><span class="s2">"自己人"</span><span class="p">,</span><span class="w">
+                </span><span class="err">supplier_type</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">supplier_phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"15810922404"</span><span class="p">,</span><span class="w">
+                </span><span class="err">stock</span><span class="p">:</span><span class="w"> </span><span class="mi">197</span><span class="p">,</span><span class="w">
+                </span><span class="err">secondpay_start_time</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">secondpay_end_time</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">pay_type</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">room_price_total</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">products_departure_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015/05/09"</span><span class="p">,</span><span class="w">
+                </span><span class="err">buyerinfo_name</span><span class="p">:</span><span class="w"> </span><span class="s2">"小美"</span><span class="p">,</span><span class="w">
+                </span><span class="err">buyerinfo_phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"18500192024"</span><span class="p">,</span><span class="w">
+                </span><span class="err">buyerinfo_email</span><span class="p">:</span><span class="w"> </span><span class="s2">"sunnyding602@qq.com"</span><span class="p">,</span><span class="w">
+                </span><span class="err">lastminute</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"10207"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"409秒杀LM"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">product_type</span><span class="p">:</span><span class="w"> </span><span class="s2">"1785"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">recommend</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">views</span><span class="p">:</span><span class="w"> </span><span class="s2">"19"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">onsale</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">booktype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">supplierid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sort_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sort_weight</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">pay_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428544528"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">start_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428543682"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1431619224"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">travel_starttime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428508800"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">travel_endtime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1432828800"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">abroad</span><span class="p">:</span><span class="w"> </span><span class="s2">"inland"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">start_pos</span><span class="p">:</span><span class="w"> </span><span class="s2">"青岛"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">continent</span><span class="p">:</span><span class="w"> </span><span class="s2">"a:1:{i:10;a:1:{i:0;s:2:"</span><span class="mi">14</span><span class="s2">";}}"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">country</span><span class="p">:</span><span class="w"> </span><span class="s2">"英国"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">city</span><span class="p">:</span><span class="w"> </span><span class="s2">"伦敦"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">poi</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">channel</span><span class="p">:</span><span class="w"> </span><span class="s2">"web,h5,mobile"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">modifytime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428648572"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">list_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">buy_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">feature</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">pic</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/public/lastmin/lastminute/2015/04/10/14286481337359"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">timeout</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">soldnum</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">reservationday</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">use_if</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">qyer_url</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">url</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">groupno</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">travelday</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">travelnight</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">vehiclego</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">vehicleback</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">reservationtype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">reservationdesc</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">phone</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">plan_id</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">discount_code</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">order_type</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">login_visible</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">supplieradmin</span><span class="p">:</span><span class="w"> </span><span class="s2">"4632288"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">adminid</span><span class="p">:</span><span class="w"> </span><span class="s2">"63"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">role</span><span class="p">:</span><span class="w"> </span><span class="s2">"255"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">end_pos</span><span class="p">:</span><span class="w"> </span><span class="s2">"英国,伦敦"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">addtime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428543707"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">modify</span><span class="p">:</span><span class="w"> </span><span class="s2">"189"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">supplier</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">isnew</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">start_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-04-09 09:41:22"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">end_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-05-15 00:00:24"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">pic_info</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">reservationhour</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">reservationmin</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">offshelvestype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">paymenttype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">suppliermodify</span><span class="p">:</span><span class="w"> </span><span class="s2">"4632288"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">verifystatus</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">soldout</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">csh</span><span class="p">:</span><span class="w"> </span><span class="s2">"["</span><span class="mi">0571-87356978</span><span class="s2">"]"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">web_order</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">wsoldnum</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">weight</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">info_give</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">detail_image</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">booking_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015年1月26日至12月31日"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">travel_time</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">ctn</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">op_pic</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">op_pic1</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">departure</span><span class="p">:</span><span class="w"> </span><span class="s2">"青岛"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">relatid</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">currency_code</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">firstpay_start_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428544528"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">firstpay_end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">secondpay_start_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">appoint_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">holiday</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">relatepoi</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">editadmin</span><span class="p">:</span><span class="w"> </span><span class="s2">"189"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="err">supplier</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">catename</span><span class="p">:</span><span class="w"> </span><span class="s2">"自己人"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">catename_en</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">catename_py</span><span class="p">:</span><span class="w"> </span><span class="s2">"ceshi"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">image</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/public/lastmin/supplier/2014/05/30/1401448532"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sub_image</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">alipay_account</span><span class="p">:</span><span class="w"> </span><span class="s2">"raffi@126.com"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"15810922404"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">siteurl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.qyer.com/"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">email</span><span class="p">:</span><span class="w"> </span><span class="s2">"zidong.li@qyer.com"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">uid</span><span class="p">:</span><span class="w"> </span><span class="s2">"5287890"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">username</span><span class="p">:</span><span class="w"> </span><span class="s2">"putao888"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">legal_person</span><span class="p">:</span><span class="w"> </span><span class="s2">"lilili"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">full_catename</span><span class="p">:</span><span class="w"> </span><span class="s2">"呀1212121"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">gid</span><span class="p">:</span><span class="w"> </span><span class="s2">"14"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">show_user_info</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">submit</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">submittime</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">modify</span><span class="p">:</span><span class="w"> </span><span class="s2">"63"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">modifytime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428384766"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">royalty_status</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">complain_phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">emergency_phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"400-1234567"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="err">products</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"1292"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">lid</span><span class="p">:</span><span class="w"> </span><span class="s2">"10207"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"1111"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">total</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">stock</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">advance_payment</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">buy_limit</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="err">orderform</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"1996795720"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">lid</span><span class="p">:</span><span class="w"> </span><span class="s2">"10207"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">pid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1292"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">cid</span><span class="p">:</span><span class="w"> </span><span class="s2">"5836"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">num</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"小美"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"18500192024"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">email</span><span class="p">:</span><span class="w"> </span><span class="s2">"sunnyding602@qq.com"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">uid</span><span class="p">:</span><span class="w"> </span><span class="s2">"5287911"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">unit_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.01"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.01"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">payment</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">datetime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428547655"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">firstpay</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">relid</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">buyer_email</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">buyer_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">notify_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">notify_time</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">notify_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">payment_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">seller_email</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">seller_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sign</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sign_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">total_fee</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">trade_no</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">trade_status</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">return_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">return_time</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">channel</span><span class="p">:</span><span class="w"> </span><span class="s2">"ios"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">guid</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">confirmstatus</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">rooms</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">msg</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_status</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_return_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_deal_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_reason</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_verify_reason</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_error</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">track_deviceid</span><span class="p">:</span><span class="w"> </span><span class="s2">"8EF77D0C-5531-4CD9-8176-6EDC49FFEC03"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="err">qyer_des</span><span class="p">:</span><span class="w"> </span><span class="s2">"NTI4NzkxMWMyVnlkbWxqWlQwaWJXOWlhV3hsTG5ObFkzVnlhWFI1Y0dGNUxuQmhlU0ltWDJsdWNIVjBYMk5vWVhKelpYUTlJblYwWmkwNElpWnZkWFJmZEhKaFpHVmZibTg5SWxSWlJWSXhPVGsyTnprMU56SXdJaVp6ZFdKcVpXTjBQU0kwTURubnA1TG1uWUJNVFNJbWNHRjViV1Z1ZEY5MGVYQmxQU0l4SWlaelpXeHNaWEpmYVdROUluSmhabVpwUURFeU5pNWpiMjBpSm5SdmRHRnNYMlpsWlQwaU1DNHdNU0ltWW05a2VUMGlNVEV4TVNJbWJtOTBhV1o1WDNWeWJEMGlhSFIwY0NVelFTVXlSaVV5Um1Gd2FTNXhlV1Z5TG1OdmJTVXlSbTBsTWtaaGNIQmhiR2x3WVhsdWIzUnBabmt1Y0dod0lpWnBkRjlpWDNCaGVUMGlNakF4TlMwd05DMHdPU0F4TURvMU1qb3pOU0k9NDRjODZkYmRlNjIzMzQwYjVlMGE="</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"1996795662"</span><span class="p">,</span><span class="w">
+                </span><span class="err">lid</span><span class="p">:</span><span class="w"> </span><span class="s2">"10207"</span><span class="p">,</span><span class="w">
+                </span><span class="err">pid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1292"</span><span class="p">,</span><span class="w">
+                </span><span class="err">cid</span><span class="p">:</span><span class="w"> </span><span class="s2">"5836"</span><span class="p">,</span><span class="w">
+                </span><span class="err">sid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                </span><span class="err">num</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                </span><span class="err">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"小美"</span><span class="p">,</span><span class="w">
+                </span><span class="err">phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"18500192000"</span><span class="p">,</span><span class="w">
+                </span><span class="err">email</span><span class="p">:</span><span class="w"> </span><span class="s2">"sunnyding602@qq.com"</span><span class="p">,</span><span class="w">
+                </span><span class="err">uid</span><span class="p">:</span><span class="w"> </span><span class="s2">"5287911"</span><span class="p">,</span><span class="w">
+                </span><span class="err">unit_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.01"</span><span class="p">,</span><span class="w">
+                </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.01"</span><span class="p">,</span><span class="w">
+                </span><span class="err">payment</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">datetime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428547478"</span><span class="p">,</span><span class="w">
+                </span><span class="err">firstpay</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                </span><span class="err">relid</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">buyer_email</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">buyer_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">notify_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">notify_time</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">notify_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">payment_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">seller_email</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">seller_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">sign</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">sign_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">total_fee</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">trade_no</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">trade_status</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">return_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">return_time</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">channel</span><span class="p">:</span><span class="w"> </span><span class="s2">"ios"</span><span class="p">,</span><span class="w">
+                </span><span class="err">guid</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">confirmstatus</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">rooms</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">msg</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_status</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_return_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_deal_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_reason</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_verify_reason</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">refund_error</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">track_deviceid</span><span class="p">:</span><span class="w"> </span><span class="s2">"8EF77D0C-5531-4CD9-8176-6EDC49FFEC03"</span><span class="p">,</span><span class="w">
+                </span><span class="err">lastalipaydatetime</span><span class="p">:</span><span class="w"> </span><span class="mi">1428547778</span><span class="p">,</span><span class="w">
+                </span><span class="err">lastminute_title</span><span class="p">:</span><span class="w"> </span><span class="s2">"409秒杀LM"</span><span class="p">,</span><span class="w">
+                </span><span class="err">lastminute_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+                </span><span class="err">products_type</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">products_title</span><span class="p">:</span><span class="w"> </span><span class="s2">"1111"</span><span class="p">,</span><span class="w">
+                </span><span class="err">alipay_account</span><span class="p">:</span><span class="w"> </span><span class="s2">"raffi@126.com"</span><span class="p">,</span><span class="w">
+                </span><span class="err">supplier_title</span><span class="p">:</span><span class="w"> </span><span class="s2">"自己人"</span><span class="p">,</span><span class="w">
+                </span><span class="err">supplier_type</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">supplier_phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"15810922404"</span><span class="p">,</span><span class="w">
+                </span><span class="err">stock</span><span class="p">:</span><span class="w"> </span><span class="mi">197</span><span class="p">,</span><span class="w">
+                </span><span class="err">secondpay_start_time</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">secondpay_end_time</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">pay_type</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">room_price_total</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">products_departure_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015/05/09"</span><span class="p">,</span><span class="w">
+                </span><span class="err">buyerinfo_name</span><span class="p">:</span><span class="w"> </span><span class="s2">"小美"</span><span class="p">,</span><span class="w">
+                </span><span class="err">buyerinfo_phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"18500192000"</span><span class="p">,</span><span class="w">
+                </span><span class="err">buyerinfo_email</span><span class="p">:</span><span class="w"> </span><span class="s2">"sunnyding602@qq.com"</span><span class="p">,</span><span class="w">
+                </span><span class="err">lastminute</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"10207"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"409秒杀LM"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">product_type</span><span class="p">:</span><span class="w"> </span><span class="s2">"1785"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">recommend</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">views</span><span class="p">:</span><span class="w"> </span><span class="s2">"19"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">onsale</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">booktype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">supplierid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sort_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sort_weight</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">pay_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428544528"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">start_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428543682"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1431619224"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">travel_starttime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428508800"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">travel_endtime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1432828800"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">abroad</span><span class="p">:</span><span class="w"> </span><span class="s2">"inland"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">start_pos</span><span class="p">:</span><span class="w"> </span><span class="s2">"青岛"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">continent</span><span class="p">:</span><span class="w"> </span><span class="s2">"a:1:{i:10;a:1:{i:0;s:2:"</span><span class="mi">14</span><span class="s2">";}}"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">country</span><span class="p">:</span><span class="w"> </span><span class="s2">"英国"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">city</span><span class="p">:</span><span class="w"> </span><span class="s2">"伦敦"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">poi</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">channel</span><span class="p">:</span><span class="w"> </span><span class="s2">"web,h5,mobile"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">modifytime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428648572"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">list_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">buy_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">feature</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">pic</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/public/lastmin/lastminute/2015/04/10/14286481337359"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">timeout</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">soldnum</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">reservationday</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">use_if</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">qyer_url</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">url</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">groupno</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">travelday</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">travelnight</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">vehiclego</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">vehicleback</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">reservationtype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">reservationdesc</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">phone</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">plan_id</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">discount_code</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">order_type</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">login_visible</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">supplieradmin</span><span class="p">:</span><span class="w"> </span><span class="s2">"4632288"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">adminid</span><span class="p">:</span><span class="w"> </span><span class="s2">"63"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">role</span><span class="p">:</span><span class="w"> </span><span class="s2">"255"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">end_pos</span><span class="p">:</span><span class="w"> </span><span class="s2">"英国,伦敦"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">addtime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428543707"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">modify</span><span class="p">:</span><span class="w"> </span><span class="s2">"189"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">supplier</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">isnew</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">start_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-04-09 09:41:22"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">end_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-05-15 00:00:24"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">pic_info</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">reservationhour</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">reservationmin</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">offshelvestype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">paymenttype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">suppliermodify</span><span class="p">:</span><span class="w"> </span><span class="s2">"4632288"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">verifystatus</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">soldout</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">csh</span><span class="p">:</span><span class="w"> </span><span class="s2">"["</span><span class="mi">0571-87356978</span><span class="s2">"]"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">web_order</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">wsoldnum</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">weight</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">info_give</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">detail_image</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">booking_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015年1月26日至12月31日"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">travel_time</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">ctn</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">op_pic</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">op_pic1</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">departure</span><span class="p">:</span><span class="w"> </span><span class="s2">"青岛"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">relatid</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">currency_code</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">firstpay_start_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428544528"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">firstpay_end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">secondpay_start_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">appoint_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">holiday</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">relatepoi</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">editadmin</span><span class="p">:</span><span class="w"> </span><span class="s2">"189"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="err">supplier</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">catename</span><span class="p">:</span><span class="w"> </span><span class="s2">"自己人"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">catename_en</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">catename_py</span><span class="p">:</span><span class="w"> </span><span class="s2">"ceshi"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">image</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/public/lastmin/supplier/2014/05/30/1401448532"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sub_image</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">alipay_account</span><span class="p">:</span><span class="w"> </span><span class="s2">"raffi@126.com"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"15810922404"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">siteurl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.qyer.com/"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">email</span><span class="p">:</span><span class="w"> </span><span class="s2">"zidong.li@qyer.com"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">uid</span><span class="p">:</span><span class="w"> </span><span class="s2">"5287890"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">username</span><span class="p">:</span><span class="w"> </span><span class="s2">"putao888"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">legal_person</span><span class="p">:</span><span class="w"> </span><span class="s2">"lilili"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">full_catename</span><span class="p">:</span><span class="w"> </span><span class="s2">"呀1212121"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">gid</span><span class="p">:</span><span class="w"> </span><span class="s2">"14"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">show_user_info</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">submit</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">submittime</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">modify</span><span class="p">:</span><span class="w"> </span><span class="s2">"63"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">modifytime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428384766"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">royalty_status</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">complain_phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">emergency_phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"400-1234567"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="err">products</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"1292"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">lid</span><span class="p">:</span><span class="w"> </span><span class="s2">"10207"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"1111"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">total</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">stock</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">advance_payment</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">buy_limit</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="err">orderform</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"1996795662"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">lid</span><span class="p">:</span><span class="w"> </span><span class="s2">"10207"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">pid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1292"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">cid</span><span class="p">:</span><span class="w"> </span><span class="s2">"5836"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">num</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"小美"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"18500192024"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">email</span><span class="p">:</span><span class="w"> </span><span class="s2">"sunny@bunengzhai.com"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">uid</span><span class="p">:</span><span class="w"> </span><span class="s2">"5287911"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">unit_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.01"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.01"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">payment</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">datetime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428547478"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">firstpay</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">relid</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">buyer_email</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">buyer_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">notify_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">notify_time</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">notify_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">payment_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">seller_email</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">seller_id</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sign</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">sign_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">total_fee</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">trade_no</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">trade_status</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">return_type</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">return_time</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">channel</span><span class="p">:</span><span class="w"> </span><span class="s2">"ios"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">guid</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">confirmstatus</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">rooms</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">msg</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_status</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_return_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_deal_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_reason</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_verify_reason</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">refund_error</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="err">track_deviceid</span><span class="p">:</span><span class="w"> </span><span class="s2">"8EF77D0C-5531-4CD9-8176-6EDC49FFEC03"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="err">qyer_des</span><span class="p">:</span><span class="w"> </span><span class="s2">"NTI4NzkxMWMyVnlkbWxqWlQwaWJXOWlhV3hsTG5ObFkzVnlhWFI1Y0dGNUxuQmhlU0ltWDJsdWNIVjBYMk5vWVhKelpYUTlJblYwWmkwNElpWnZkWFJmZEhKaFpHVmZibTg5SWxSWlJWSXhPVGsyTnprMU5qWXlJaVp6ZFdKcVpXTjBQU0kwTURubnA1TG1uWUJNVFNJbWNHRjViV1Z1ZEY5MGVYQmxQU0l4SWlaelpXeHNaWEpmYVdROUluSmhabVpwUURFeU5pNWpiMjBpSm5SdmRHRnNYMlpsWlQwaU1DNHdNU0ltWW05a2VUMGlNVEV4TVNJbWJtOTBhV1o1WDNWeWJEMGlhSFIwY0NVelFTVXlSaVV5Um1Gd2FTNXhlV1Z5TG1OdmJTVXlSbTBsTWtaaGNIQmhiR2x3WVhsdWIzUnBabmt1Y0dod0lpWnBkRjlpWDNCaGVUMGlNakF4TlMwd05DMHdPU0F4TURvME9Ub3pPQ0k9NDRjODZkYmRlNjIzMzQwYjVlMGE="</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://open.qyer.com/lastminute/app_get_userorderformlist</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必须</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>client_id</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空字符串</td>
+<td>Open平台客户端id</td>
+</tr>
+<tr>
+<td><strong>client_secret</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空字符串</td>
+<td>Open平台客户端密码</td>
+</tr>
+<tr>
+<td><strong>oauth_token</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空字符串</td>
+<td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
+</tr>
+<tr>
+<td>is_show_pay</td>
+<td>Int</td>
+<td>否</td>
+<td>0</td>
+<td>是否显示支付类(我也没看懂, 目前App传的是1)</td>
+</tr>
+<tr>
+<td><code class="prettyprint">count</code></td>
+<td>int</td>
+<td>否</td>
+<td>10</td>
+<td>每页显示数量</td>
+</tr>
+<tr>
+<td><code class="prettyprint">page</code></td>
+<td>int</td>
+<td>否</td>
+<td>1</td>
+<td>页码</td>
+</tr>
+<tr>
+<td><code class="prettyprint">is_show_supplier</code></td>
+<td>String</td>
+<td>否</td>
+<td>0</td>
+<td>显示供应商创建的折扣 默认值 0:不显示供应商的 1:显示全部</td>
+</tr>
+<tr>
+<td><em>track_user_id</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>用户UID，未登录传空。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_deviceid</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>设备号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_version</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>当前版本。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_channel</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>安装渠道。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_device_info</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>设备型号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_os</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>操作系统和版本号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>app_installtime</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>APP安装时间。（数据中心用）</td>
+</tr>
+</tbody></table>
+
+<h2 id="折扣筛选/排序接口">折扣筛选/排序接口</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_get_lastminute_list?oauth_token=e458c75b658c5252c4c115ca737b2053&amp;client_secret=44c86dbde623340b5e0a&amp;client_id=qyer_discount_ios&amp;track_os=ios%25208.3&amp;track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)&amp;orderValue=0%7C1428465156%7C10161&amp;continent_id=0&amp;track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03&amp;orderName=r0%7Cs1%7Ci2&amp;track_app_version=1.6.3&amp;times=&amp;product_type=0&amp;app_installtime=1421109485&amp;track_app_channel=App%2520Store&amp;track_user_id=5287911&amp;country_id=0"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">count</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+        </span><span class="err">orderName</span><span class="p">:</span><span class="w"> </span><span class="s2">"r0|s1|i2"</span><span class="p">,</span><span class="w">
+        </span><span class="err">orderValue</span><span class="p">:</span><span class="w"> </span><span class="s2">"0|1428465156|10161"</span><span class="p">,</span><span class="w">
+        </span><span class="err">lastminutes</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"37"</span><span class="p">,</span><span class="w">
+                </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"子冬底层重构自由行00"</span><span class="p">,</span><span class="w">
+                </span><span class="err">pic</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://static.qyer.com/upload/lastminute/main/e9/2f/e92fc3818ac72305c6a87921d82d8518_275"</span><span class="p">,</span><span class="w">
+                </span><span class="err">detail</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;em&gt;5555&lt;/em&gt;元起"</span><span class="p">,</span><span class="w">
+                </span><span class="err">booktype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                </span><span class="err">firstpay_end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1450195200"</span><span class="p">,</span><span class="w">
+                </span><span class="err">end_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015.12.16结束"</span><span class="p">,</span><span class="w">
+                </span><span class="err">feature</span><span class="p">:</span><span class="w"> </span><span class="s2">"1022,1023"</span><span class="p">,</span><span class="w">
+                </span><span class="err">list_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"99991"</span><span class="p">,</span><span class="w">
+                </span><span class="err">buy_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"5555"</span><span class="p">,</span><span class="w">
+                </span><span class="err">self_use</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="err">first_pub</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="err">perperty_today_new</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">lastminute_des</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.6折"</span><span class="p">,</span><span class="w">
+                </span><span class="err">url</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://appview.qyer.com/z/deal/37/"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"10202"</span><span class="p">,</span><span class="w">
+                </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"预定上线审核测试"</span><span class="p">,</span><span class="w">
+                </span><span class="err">pic</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/public/supplier/lastminute/2015/04/10/14286406837322/600x400"</span><span class="p">,</span><span class="w">
+                </span><span class="err">detail</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;em&gt;11&lt;/em&gt;元起"</span><span class="p">,</span><span class="w">
+                </span><span class="err">booktype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                </span><span class="err">firstpay_end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1431532800"</span><span class="p">,</span><span class="w">
+                </span><span class="err">end_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015.05.14结束"</span><span class="p">,</span><span class="w">
+                </span><span class="err">feature</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="err">list_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"111"</span><span class="p">,</span><span class="w">
+                </span><span class="err">buy_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"11"</span><span class="p">,</span><span class="w">
+                </span><span class="err">self_use</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">first_pub</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">perperty_today_new</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="err">lastminute_des</span><span class="p">:</span><span class="w"> </span><span class="s2">"1折"</span><span class="p">,</span><span class="w">
+                </span><span class="err">url</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://appview.qyer.com/z/deal/10202/"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://open.qyer.com/lastminute/app_lastminute_list</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<p>必选    类型及范围  说明</p>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必须</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>client_id</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空字符串</td>
+<td>Open平台客户端id</td>
+</tr>
+<tr>
+<td><strong>client_secret</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空字符串</td>
+<td>Open平台客户端密码</td>
+</tr>
+<tr>
+<td><strong>oauth_token</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空字符串</td>
+<td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
+</tr>
+<tr>
+<td><strong><code class="prettyprint">order</code></strong></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>不传采用默认排序, salesAsc(销量正序)  salesDesc(销量倒序) priceAsc(价格正序) priceDesc(价格倒序)  in24(当日新品)</td>
+</tr>
+<tr>
+<td><code class="prettyprint">is_show_pay</code></td>
+<td>Int</td>
+<td>否</td>
+<td>0</td>
+<td>显示支付类 默认值0 不显示支付类</td>
+</tr>
+<tr>
+<td><code class="prettyprint">product_type</code></td>
+<td>Int</td>
+<td>否</td>
+<td>0</td>
+<td>分类id 默认值0 指全部分类</td>
+</tr>
+<tr>
+<td><code class="prettyprint">page_size</code></td>
+<td>int</td>
+<td>否</td>
+<td>10</td>
+<td>每页显示数量</td>
+</tr>
+<tr>
+<td><code class="prettyprint">times</code></td>
+<td>string</td>
+<td>否</td>
+<td>空字符串</td>
+<td>时间</td>
+</tr>
+<tr>
+<td><code class="prettyprint">continent_id</code></td>
+<td>int</td>
+<td>否</td>
+<td>10</td>
+<td>大洲id</td>
+</tr>
+<tr>
+<td><code class="prettyprint">country_id</code></td>
+<td>int</td>
+<td>否</td>
+<td>10</td>
+<td>国家id</td>
+</tr>
+<tr>
+<td><code class="prettyprint">departure</code></td>
+<td>string</td>
+<td>否</td>
+<td>10</td>
+<td>出发城市</td>
+</tr>
+<tr>
+<td><code class="prettyprint">orderName</code></td>
+<td>string</td>
+<td>否</td>
+<td>10</td>
+<td>排序值对应的排序名称 格式:recommend/id/edittime</td>
+</tr>
+<tr>
+<td><code class="prettyprint">orderValue</code></td>
+<td>string</td>
+<td>否</td>
+<td>10</td>
+<td>当前列表排序值 格式:推荐值/id值/更新时间戳值 (当页最后一个折扣的推荐值、id值、更新时间值)</td>
+</tr>
+<tr>
+<td><code class="prettyprint">is_show_supplier</code></td>
+<td>String</td>
+<td>否</td>
+<td>0</td>
+<td>显示供应商创建的折扣 默认值 0:不显示供应商的 1:显示全部</td>
+</tr>
+<tr>
+<td><em>track_user_id</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>用户UID，未登录传空。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_deviceid</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>设备号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_version</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>当前版本。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_channel</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>安装渠道。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_device_info</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>设备型号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_os</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>操作系统和版本号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>app_installtime</em></td>
+<td>String</td>
+<td>否</td>
+<td>空字符串</td>
+<td>APP安装时间。（数据中心用）</td>
+</tr>
+</tbody></table>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
