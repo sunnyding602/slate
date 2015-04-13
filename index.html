@@ -142,22 +142,86 @@
 
 <h3 id="query-parameters">Query Parameters</h3>
 
-<p><code class="prettyprint">不需要参数</code></p>
-
-<aside class="success">
-Remember — 之前的参数是得传的, 例如: 
-oauth_token=33e4fcb72b252089930b65b4187cbf34
-&client_secret=44c86dbde623340b5e0a
-&client_id=qyer_discount_ios
-&track_app_version=1.6.3
-&track_os=ios%25208.2
-&app_installtime=1421109485
-&track_app_channel=App%2520Store
-&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
-&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
-&track_user_id=5443973
-&size=640x1136
-</aside>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必须</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>client_id</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端id</td>
+</tr>
+<tr>
+<td><strong>client_secret</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端密码</td>
+</tr>
+<tr>
+<td><strong>oauth_token</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
+</tr>
+<tr>
+<td><em>track_user_id</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>用户UID，未登录传空。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_deviceid</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_version</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>当前版本。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_channel</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>安装渠道。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_device_info</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备型号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_os</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>操作系统和版本号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>app_installtime</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>APP安装时间。（数据中心用）</td>
+</tr>
+</tbody></table>
 
 <h2 id="获取精选商品-可用于首页">获取精选商品-可用于首页</h2>
 <pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_selected_product?page=1&amp;pageSize=10"</span>
@@ -218,34 +282,93 @@ oauth_token=33e4fcb72b252089930b65b4187cbf34
 </tr>
 </thead><tbody>
 <tr>
-<td>page</td>
+<td><code class="prettyprint">page</code></td>
 <td>Int 或 String</td>
 <td>否</td>
 <td>1</td>
 <td>展示第几页数据</td>
 </tr>
 <tr>
-<td>pageSize</td>
+<td><code class="prettyprint">pageSize</code></td>
 <td>Int 或 String</td>
 <td>否</td>
 <td>10</td>
 <td>每页展示多少条数据</td>
 </tr>
+<tr>
+<td><strong>client_id</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端id</td>
+</tr>
+<tr>
+<td><strong>client_secret</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端密码</td>
+</tr>
+<tr>
+<td><strong>oauth_token</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
+</tr>
+<tr>
+<td><em>track_user_id</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>用户UID，未登录传空。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_deviceid</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_version</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>当前版本。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_channel</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>安装渠道。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_device_info</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备型号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_os</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>操作系统和版本号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>app_installtime</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>APP安装时间。（数据中心用）</td>
+</tr>
 </tbody></table>
 
-<aside class="success">
-Remember — 之前的参数是得传的, 例如: 
-oauth_token=33e4fcb72b252089930b65b4187cbf34
-&client_secret=44c86dbde623340b5e0a
-&client_id=qyer_discount_ios
-&track_app_version=1.6.3
-&track_os=ios%25208.2
-&app_installtime=1421109485
-&track_app_channel=App%2520Store
-&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
-&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
-&track_user_id=5443973
-&size=640x1136
+<aside class="notice">
+为了展示美观, 样本返回数据只展示了不多的几条数据
 </aside>
 
 <h2 id="获取发现页混排列表">获取发现页混排列表</h2>
@@ -326,38 +449,93 @@ oauth_token=33e4fcb72b252089930b65b4187cbf34
 </tr>
 </thead><tbody>
 <tr>
-<td>page</td>
+<td><code class="prettyprint">page</code></td>
 <td>Int 或 String</td>
 <td>否</td>
 <td>1</td>
 <td>展示第几页数据</td>
 </tr>
 <tr>
-<td>pageSize</td>
+<td><code class="prettyprint">pageSize</code></td>
 <td>Int 或 String</td>
 <td>否</td>
 <td>10</td>
 <td>每页展示多少条数据</td>
 </tr>
+<tr>
+<td><strong>client_id</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端id</td>
+</tr>
+<tr>
+<td><strong>client_secret</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端密码</td>
+</tr>
+<tr>
+<td><strong>oauth_token</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
+</tr>
+<tr>
+<td><em>track_user_id</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>用户UID，未登录传空。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_deviceid</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_version</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>当前版本。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_channel</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>安装渠道。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_device_info</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备型号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_os</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>操作系统和版本号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>app_installtime</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>APP安装时间。（数据中心用）</td>
+</tr>
 </tbody></table>
 
 <aside class="notice">
 为了展示美观, 样本返回数据只展示了不多的几条数据
-</aside>
-
-<aside class="success">
-Remember — 之前的参数是得传的, 例如: 
-oauth_token=33e4fcb72b252089930b65b4187cbf34
-&client_secret=44c86dbde623340b5e0a
-&client_id=qyer_discount_ios
-&track_app_version=1.6.3
-&track_os=ios%25208.2
-&app_installtime=1421109485
-&track_app_channel=App%2520Store
-&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
-&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
-&track_user_id=5443973
-&size=640x1136
 </aside>
 
 <h2 id="获取分类页的分类">获取分类页的分类</h2>
@@ -432,29 +610,89 @@ oauth_token=33e4fcb72b252089930b65b4187cbf34
 
 <h3 id="query-parameters">Query Parameters</h3>
 
-<p><code class="prettyprint">不需要参数</code></p>
-
-<aside class="notice">
-为了展示美观, 样本返回数据只展示了不多的几条数据
-</aside>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必须</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>client_id</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端id</td>
+</tr>
+<tr>
+<td><strong>client_secret</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端密码</td>
+</tr>
+<tr>
+<td><strong>oauth_token</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
+</tr>
+<tr>
+<td><em>track_user_id</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>用户UID，未登录传空。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_deviceid</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_version</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>当前版本。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_channel</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>安装渠道。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_device_info</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备型号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_os</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>操作系统和版本号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>app_installtime</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>APP安装时间。（数据中心用）</td>
+</tr>
+</tbody></table>
 
 <aside class="notice">
 _comment字段中的数据仅仅是注释, 请勿使用
-</aside>
-
-<aside class="success">
-Remember — 之前的参数是得传的, 例如: 
-oauth_token=33e4fcb72b252089930b65b4187cbf34
-&client_secret=44c86dbde623340b5e0a
-&client_id=qyer_discount_ios
-&track_app_version=1.6.3
-&track_os=ios%25208.2
-&app_installtime=1421109485
-&track_app_channel=App%2520Store
-&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
-&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
-&track_user_id=5443973
-&size=640x1136
 </aside>
 
 <h2 id="获取搜索热词">获取搜索热词</h2>
@@ -492,25 +730,89 @@ oauth_token=33e4fcb72b252089930b65b4187cbf34
 
 <h3 id="query-parameters">Query Parameters</h3>
 
-<p><code class="prettyprint">不需要参数</code></p>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必须</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>client_id</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端id</td>
+</tr>
+<tr>
+<td><strong>client_secret</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端密码</td>
+</tr>
+<tr>
+<td><strong>oauth_token</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
+</tr>
+<tr>
+<td><em>track_user_id</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>用户UID，未登录传空。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_deviceid</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_version</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>当前版本。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_channel</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>安装渠道。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_device_info</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备型号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_os</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>操作系统和版本号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>app_installtime</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>APP安装时间。（数据中心用）</td>
+</tr>
+</tbody></table>
 
 <aside class="notice">
 为了展示美观, 样本返回数据只展示了不多的几条数据
-</aside>
-
-<aside class="success">
-Remember — 之前的参数是得传的, 例如: 
-oauth_token=33e4fcb72b252089930b65b4187cbf34
-&client_secret=44c86dbde623340b5e0a
-&client_id=qyer_discount_ios
-&track_app_version=1.6.3
-&track_os=ios%25208.2
-&app_installtime=1421109485
-&track_app_channel=App%2520Store
-&track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03
-&track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)
-&track_user_id=5443973
-&size=640x1136
 </aside>
 
 <h2 id="获取用户订单列表">获取用户订单列表</h2>
@@ -1026,21 +1328,21 @@ oauth_token=33e4fcb72b252089930b65b4187cbf34
 <td><strong>client_id</strong></td>
 <td>String</td>
 <td>是</td>
-<td>空字符串</td>
+<td>空</td>
 <td>Open平台客户端id</td>
 </tr>
 <tr>
 <td><strong>client_secret</strong></td>
 <td>String</td>
 <td>是</td>
-<td>空字符串</td>
+<td>空</td>
 <td>Open平台客户端密码</td>
 </tr>
 <tr>
 <td><strong>oauth_token</strong></td>
 <td>String</td>
 <td>是</td>
-<td>空字符串</td>
+<td>空</td>
 <td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
 </tr>
 <tr>
@@ -1075,49 +1377,49 @@ oauth_token=33e4fcb72b252089930b65b4187cbf34
 <td><em>track_user_id</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>用户UID，未登录传空。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>track_deviceid</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>设备号。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>track_app_version</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>当前版本。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>track_app_channel</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>安装渠道。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>track_device_info</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>设备型号。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>track_os</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>操作系统和版本号。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>app_installtime</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>APP安装时间。（数据中心用）</td>
 </tr>
 </tbody></table>
@@ -1200,29 +1502,29 @@ oauth_token=33e4fcb72b252089930b65b4187cbf34
 <td><strong>client_id</strong></td>
 <td>String</td>
 <td>是</td>
-<td>空字符串</td>
+<td>空</td>
 <td>Open平台客户端id</td>
 </tr>
 <tr>
 <td><strong>client_secret</strong></td>
 <td>String</td>
 <td>是</td>
-<td>空字符串</td>
+<td>空</td>
 <td>Open平台客户端密码</td>
 </tr>
 <tr>
 <td><strong>oauth_token</strong></td>
 <td>String</td>
 <td>是</td>
-<td>空字符串</td>
+<td>空</td>
 <td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
 </tr>
 <tr>
 <td><strong><code class="prettyprint">order</code></strong></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
-<td>不传采用默认排序, salesAsc(销量正序)  salesDesc(销量倒序) priceAsc(价格正序) priceDesc(价格倒序)  in24(当日新品)</td>
+<td>空</td>
+<td><strong>不传采用默认排序, salesAsc(销量正序)  salesDesc(销量倒序) priceAsc(价格正序) priceDesc(价格倒序)  in24(当日新品)</strong></td>
 </tr>
 <tr>
 <td><code class="prettyprint">is_show_pay</code></td>
@@ -1249,7 +1551,7 @@ oauth_token=33e4fcb72b252089930b65b4187cbf34
 <td><code class="prettyprint">times</code></td>
 <td>string</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>时间</td>
 </tr>
 <tr>
@@ -1298,49 +1600,49 @@ oauth_token=33e4fcb72b252089930b65b4187cbf34
 <td><em>track_user_id</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>用户UID，未登录传空。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>track_deviceid</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>设备号。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>track_app_version</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>当前版本。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>track_app_channel</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>安装渠道。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>track_device_info</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>设备型号。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>track_os</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>操作系统和版本号。（数据中心用）</td>
 </tr>
 <tr>
 <td><em>app_installtime</em></td>
 <td>String</td>
 <td>否</td>
-<td>空字符串</td>
+<td>空</td>
 <td>APP安装时间。（数据中心用）</td>
 </tr>
 </tbody></table>
