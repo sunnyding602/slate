@@ -1425,7 +1425,7 @@ _comment字段中的数据仅仅是注释, 请勿使用
 </tbody></table>
 
 <h2 id="折扣筛选/排序接口">折扣筛选/排序接口</h2>
-<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_get_lastminute_list?oauth_token=e458c75b658c5252c4c115ca737b2053&amp;client_secret=44c86dbde623340b5e0a&amp;client_id=qyer_discount_ios&amp;track_os=ios%25208.3&amp;track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)&amp;orderValue=0%7C1428465156%7C10161&amp;continent_id=0&amp;track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03&amp;orderName=r0%7Cs1%7Ci2&amp;track_app_version=1.6.3&amp;times=&amp;product_type=0&amp;app_installtime=1421109485&amp;track_app_channel=App%2520Store&amp;track_user_id=5287911&amp;country_id=0"</span>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_get_lastminute_list?sequence=in24&amp;oauth_token=e458c75b658c5252c4c115ca737b2053&amp;client_secret=44c86dbde623340b5e0a&amp;client_id=qyer_discount_ios&amp;track_os=ios%25208.3&amp;track_device_info=iPhone%25205(ChinaMobile,ChinaTelecom,ChinaUnicom)&amp;orderValue=0%7C1428465156%7C10161&amp;continent_id=0&amp;track_deviceid=8EF77D0C-5531-4CD9-8176-6EDC49FFEC03&amp;orderName=r0%7Cs1%7Ci2&amp;track_app_version=1.6.3&amp;times=&amp;product_type=0&amp;app_installtime=1421109485&amp;track_app_channel=App%2520Store&amp;track_user_id=5287911&amp;country_id=0"</span>
 </code></pre>
 
 <blockquote>
@@ -1439,6 +1439,7 @@ _comment字段中的数据仅仅是注释, 请勿使用
         </span><span class="err">count</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
         </span><span class="err">orderName</span><span class="p">:</span><span class="w"> </span><span class="s2">"r0|s1|i2"</span><span class="p">,</span><span class="w">
         </span><span class="err">orderValue</span><span class="p">:</span><span class="w"> </span><span class="s2">"0|1428465156|10161"</span><span class="p">,</span><span class="w">
+        </span><span class="err">sequence</span><span class="p">:</span><span class="w"> </span><span class="s2">"in24"</span><span class="p">,</span><span class="w">
         </span><span class="err">lastminutes</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
                 </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"37"</span><span class="p">,</span><span class="w">
@@ -1520,7 +1521,7 @@ _comment字段中的数据仅仅是注释, 请勿使用
 <td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
 </tr>
 <tr>
-<td><strong><code class="prettyprint">order</code></strong></td>
+<td><strong><code class="prettyprint">sequence</code></strong></td>
 <td>String</td>
 <td>否</td>
 <td>空</td>
