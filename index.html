@@ -1538,6 +1538,13 @@ _comment字段中的数据仅仅是注释, 请勿使用
 <td><strong>不传采用默认排序, salesAsc(销量正序)  salesDesc(销量倒序) priceAsc(价格正序) priceDesc(价格倒序)  in24(当日新品)</strong></td>
 </tr>
 <tr>
+<td><strong><code class="prettyprint">kw</code></strong></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td><strong>搜索关键词</strong></td>
+</tr>
+<tr>
 <td><code class="prettyprint">is_show_pay</code></td>
 <td>Int</td>
 <td>否</td>
@@ -1606,6 +1613,219 @@ _comment字段中的数据仅仅是注释, 请勿使用
 <td>否</td>
 <td>0</td>
 <td>显示供应商创建的折扣 默认值 0:不显示供应商的 1:显示全部</td>
+</tr>
+<tr>
+<td><em>track_user_id</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>用户UID，未登录传空。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_deviceid</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_version</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>当前版本。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_channel</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>安装渠道。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_device_info</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备型号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_os</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>操作系统和版本号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>app_installtime</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>APP安装时间。（数据中心用）</td>
+</tr>
+</tbody></table>
+
+<h2 id="详情页-获取商品详情">详情页-获取商品详情</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/get_detail?client_id=qyer_discount_ios&amp;client_secret=44c86dbde623340b5e0a&amp;oauth_token=27d800958600a7afa627d94bf9359c38&amp;source=RecommandViewController&amp;track_user_id=275710&amp;id=10232&amp;app_installtime=1428906416&amp;track_app_version=1.0&amp;track_deviceid=1B8567DB-B19A-440D-9EE0-41408B6F0961&amp;track_device_info=iPhone%25205s&amp;track_app_channel=App%2520Store&amp;track_os=ios%25207.1.2"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"10232"</span><span class="p">,</span><span class="w">
+        </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"目的地fuzhi"</span><span class="p">,</span><span class="w">
+        </span><span class="err">product_type</span><span class="p">:</span><span class="w"> </span><span class="s2">"1983"</span><span class="p">,</span><span class="w">
+        </span><span class="err">recommend</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">views</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="err">onsale</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="err">booktype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="err">supplierid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
+        </span><span class="err">sort_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1429254571"</span><span class="p">,</span><span class="w">
+        </span><span class="err">sort_weight</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">sort_sold_num</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">sort_list_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">pay_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1429200000"</span><span class="p">,</span><span class="w">
+        </span><span class="err">start_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1429200000"</span><span class="p">,</span><span class="w">
+        </span><span class="err">end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"2145888000"</span><span class="p">,</span><span class="w">
+        </span><span class="err">travel_starttime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428422400"</span><span class="p">,</span><span class="w">
+        </span><span class="err">travel_endtime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1432828800"</span><span class="p">,</span><span class="w">
+        </span><span class="err">abroad</span><span class="p">:</span><span class="w"> </span><span class="s2">"abroad"</span><span class="p">,</span><span class="w">
+        </span><span class="err">continent</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+        </span><span class="err">city</span><span class="p">:</span><span class="w"> </span><span class="s2">"英国湖区"</span><span class="p">,</span><span class="w">
+        </span><span class="err">poi</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">channel</span><span class="p">:</span><span class="w"> </span><span class="s2">"web,h5,mobile"</span><span class="p">,</span><span class="w">
+        </span><span class="err">modifytime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1429254571"</span><span class="p">,</span><span class="w">
+        </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;em&gt;1&lt;/em&gt;元起"</span><span class="p">,</span><span class="w">
+        </span><span class="err">list_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="err">buy_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="err">pic</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/picstock/2014/09/12/14105193375931/600x400"</span><span class="p">,</span><span class="w">
+        </span><span class="err">timeout</span><span class="p">:</span><span class="w"> </span><span class="s2">"60"</span><span class="p">,</span><span class="w">
+        </span><span class="err">soldnum</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">reservationday</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="err">onsale_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">detail</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="err">use_if</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="err">qyer_url</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://z.qyer.com/deal/10232/"</span><span class="p">,</span><span class="w">
+        </span><span class="err">groupno</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="err">travelday</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="err">travelnight</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="err">vehiclego</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="err">vehicleback</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="err">reservationtype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="err">reservationdesc</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="err">phone</span><span class="p">:</span><span class="w"> </span><span class="s2">"["</span><span class="mi">400-232424</span><span class="s2">","</span><span class="mi">136767887898</span><span class="s2">","</span><span class="mi">400-234234</span><span class="s2">","</span><span class="mi">400-123456</span><span class="s2">","</span><span class="mi">400-324324</span><span class="s2">","</span><span class="mi">400-32432423</span><span class="s2">","</span><span class="mi">40-32432423</span><span class="s2">","</span><span class="mi">400-3242342</span><span class="s2">","</span><span class="mi">400-32423423</span><span class="s2">","</span><span class="mi">400-32424214124</span><span class="s2">"]"</span><span class="p">,</span><span class="w">
+        </span><span class="err">highlight</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="err">plan_id</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">discount_code</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="err">order_type</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">login_visible</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">supplieradmin</span><span class="p">:</span><span class="w"> </span><span class="s2">"5287890"</span><span class="p">,</span><span class="w">
+        </span><span class="err">adminid</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">role</span><span class="p">:</span><span class="w"> </span><span class="s2">"255"</span><span class="p">,</span><span class="w">
+        </span><span class="err">addtime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1429237314"</span><span class="p">,</span><span class="w">
+        </span><span class="err">modify</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">tel</span><span class="p">:</span><span class="w"> </span><span class="s2">"400232424,136767887898,400234234,400123456,400324324,40032432423,4032432423,4003242342,40032423423,40032424214124"</span><span class="p">,</span><span class="w">
+        </span><span class="err">related</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">"10207"</span><span class="p">,</span><span class="w">
+                </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"409秒杀LM"</span><span class="p">,</span><span class="w">
+                </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+                </span><span class="err">pic</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/public/lastmin/lastminute/2015/04/10/14286481337359/600x400/600x400"</span><span class="p">,</span><span class="w">
+                </span><span class="err">addtime</span><span class="p">:</span><span class="w"> </span><span class="s2">"1428543707"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="err">self_use</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="err">first_pub</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="err">detail_image</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+        </span><span class="p">],</span><span class="w">
+        </span><span class="err">detail_image180</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+        </span><span class="p">],</span><span class="w">
+        </span><span class="err">end_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"已结束"</span><span class="p">,</span><span class="w">
+        </span><span class="err">deal_info</span><span class="p">:</span><span class="w"> </span><span class="s2">"出发地:曼谷 目的地:英国湖区,英国"</span><span class="p">,</span><span class="w">
+        </span><span class="err">order_info</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"http://m.qyer.com/z/index.php?action=detail&amp;id=10232&amp;client_id=qyer_discount_ios"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="err">order_info_txt</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"穷游官网预订"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="err">favored</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="err">app_url</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/10232/source=app"</span><span class="p">,</span><span class="w">
+        </span><span class="err">app_booktype</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="err">app_start_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-04-17 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="err">app_end_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"2038-01-01 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="err">app_start_date_new</span><span class="p">:</span><span class="w"> </span><span class="s2">"1429200000"</span><span class="p">,</span><span class="w">
+        </span><span class="err">app_end_date_new</span><span class="p">:</span><span class="w"> </span><span class="s2">"2145888000"</span><span class="p">,</span><span class="w">
+        </span><span class="err">app_firstpay_start_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1429200000"</span><span class="p">,</span><span class="w">
+        </span><span class="err">app_firstpay_end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"2145888000"</span><span class="p">,</span><span class="w">
+        </span><span class="err">app_secondpay_start_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1429200000"</span><span class="p">,</span><span class="w">
+        </span><span class="err">app_secondpay_end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"2145888000"</span><span class="p">,</span><span class="w">
+        </span><span class="err">app_stock</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="err">m_qyer_url</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/10232/"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://open.qyer.com/lastminute/get_detail</code></p>
+
+<aside class="notice">
+新增tel字段 返回值为逗号分隔的电话, 不含 - ( ) 字符
+</aside>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必须</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>client_id</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端id</td>
+</tr>
+<tr>
+<td><strong>client_secret</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端密码</td>
+</tr>
+<tr>
+<td><strong>oauth_token</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
+</tr>
+<tr>
+<td><code class="prettyprint">id</code></td>
+<td>Int</td>
+<td>是</td>
+<td>空</td>
+<td>折扣id</td>
+</tr>
+<tr>
+<td><em>source</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>进入折扣详情页的类名，用于数据中心统计（例如：LastMinuteViewController进入，source=LastMinuteViewController）</td>
 </tr>
 <tr>
 <td><em>track_user_id</em></td>
