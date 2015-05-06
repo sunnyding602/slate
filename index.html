@@ -44,7 +44,185 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="折扣app">折扣App</h1>
+        <h1 id="基础知识">基础知识</h1>
+
+<h2 id="常用产品类型对应关系">常用产品类型对应关系</h2>
+<pre><code class="highlight shell">下面的json是我认为翻译的灰常赞, 所以就保留这些信息,并无作用
+</code></pre>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"info"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"times"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1016</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fightTicket"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"机票"</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"机票"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1017</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotel"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"酒店"</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"酒店"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1018</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"diyTour"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"自由行"</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"自由行"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1020</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ship"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"邮轮"</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"邮轮"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1785</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"签证"</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"签证"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1983</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localTour"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"当地游"</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"当地游"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1049</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"insurance"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"保险"</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"保险"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1021</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"carRental"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"租车"</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"租车"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2161</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"euroTrainTicket"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"欧铁票"</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"欧铁票"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1050</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ticketEtc"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"门票及其他"</span><span class="w">
+            </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"门票及其他"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<aside class="notice">
+右边的json并没有用!!!
+</aside>
+
+<table><thead>
+<tr>
+<th>地区</th>
+<th>id</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>北京/天津</td>
+<td>bjtj</td>
+</tr>
+<tr>
+<td>上海/杭州</td>
+<td>shhz</td>
+</tr>
+<tr>
+<td>成都/重庆</td>
+<td>cdcq</td>
+</tr>
+<tr>
+<td>广州/深圳</td>
+<td>gzsz</td>
+</tr>
+<tr>
+<td>港澳台</td>
+<td>hmt</td>
+</tr>
+<tr>
+<td>国内其他</td>
+<td>inland</td>
+</tr>
+<tr>
+<td>海外</td>
+<td>abroad</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>id</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1016</td>
+<td>flights</td>
+<td>机票</td>
+</tr>
+<tr>
+<td>1017</td>
+<td>hotels</td>
+<td>酒店</td>
+</tr>
+<tr>
+<td>1018</td>
+<td>free</td>
+<td>自由行</td>
+</tr>
+<tr>
+<td>9999</td>
+<td>freetour</td>
+<td>机+酒 //临时加不是真正状态</td>
+</tr>
+<tr>
+<td>1020</td>
+<td>cruise</td>
+<td>邮轮</td>
+</tr>
+<tr>
+<td>1021</td>
+<td>car</td>
+<td>租车</td>
+</tr>
+<tr>
+<td>1049</td>
+<td>safe</td>
+<td>保险</td>
+</tr>
+<tr>
+<td>1785</td>
+<td>qz</td>
+<td>签证</td>
+</tr>
+<tr>
+<td>1983</td>
+<td>local</td>
+<td>当地游</td>
+</tr>
+<tr>
+<td>2161</td>
+<td>ot</td>
+<td>欧铁票</td>
+</tr>
+<tr>
+<td>1050</td>
+<td>other</td>
+<td>门票及其他</td>
+</tr>
+</tbody></table>
+
+<h1 id="折扣app">折扣App</h1>
 
 <h2 id="获取幻灯,产品分类,热门专题-首页">获取幻灯,产品分类,热门专题-首页</h2>
 <pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_home"</span>
@@ -241,7 +419,7 @@
       </span><span class="err">departureTime</span><span class="p">:</span><span class="w"> </span><span class="s2">"3月 4月 5月"</span><span class="p">,</span><span class="w">
       </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/10057/?source=app"</span><span class="p">,</span><span class="w">
       </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;em&gt;1074&lt;/em&gt;元起"</span><span class="p">,</span><span class="w">
-      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotel"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotels"</span><span class="p">,</span><span class="w">
       </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/3/31/551a51a3a2216.png"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -250,7 +428,7 @@
       </span><span class="err">departureTime</span><span class="p">:</span><span class="w"> </span><span class="s2">"3月 4月 5月"</span><span class="p">,</span><span class="w">
       </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/9993/?source=app"</span><span class="p">,</span><span class="w">
       </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;em&gt;8999&lt;/em&gt;元起"</span><span class="p">,</span><span class="w">
-      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"fightTicket"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"flights"</span><span class="p">,</span><span class="w">
       </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a51a602cfe.png"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -259,7 +437,7 @@
       </span><span class="err">departureTime</span><span class="p">:</span><span class="w"> </span><span class="s2">"3月 4月 5月"</span><span class="p">,</span><span class="w">
       </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/9865/?source=app"</span><span class="p">,</span><span class="w">
       </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;em&gt;99999&lt;/em&gt;元起"</span><span class="p">,</span><span class="w">
-      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"diyTour"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"free"</span><span class="p">,</span><span class="w">
       </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://test1362383214.qiniudn.com/lastminute/library/2015/03/31/551a51a808dd2.png"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
@@ -387,7 +565,7 @@
       </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="mi">9991</span><span class="p">,</span><span class="w">
       </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"deal"</span><span class="p">,</span><span class="w">
       </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"上海直飞毛里求斯8天5晚自由行"</span><span class="p">,</span><span class="w">
-      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"diyTour"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"free"</span><span class="p">,</span><span class="w">
       </span><span class="err">departureTime</span><span class="p">:</span><span class="w"> </span><span class="s2">"3月 4月 5月"</span><span class="p">,</span><span class="w">
       </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;em&gt;99999&lt;/em&gt;元起"</span><span class="p">,</span><span class="w">
       </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/9991/?source=app"</span><span class="p">,</span><span class="w">
@@ -397,7 +575,7 @@
       </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="mi">23840</span><span class="p">,</span><span class="w">
       </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"deal"</span><span class="p">,</span><span class="w">
       </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"Beijing飞东京6天5晚酒店"</span><span class="p">,</span><span class="w">
-      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotel"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotels"</span><span class="p">,</span><span class="w">
       </span><span class="err">departureTime</span><span class="p">:</span><span class="w"> </span><span class="s2">"4月 "</span><span class="p">,</span><span class="w">
       </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;em&gt;77779&lt;/em&gt;元起"</span><span class="p">,</span><span class="w">
       </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/23840/?source=app"</span><span class="p">,</span><span class="w">
@@ -407,7 +585,7 @@
       </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="mi">10121</span><span class="p">,</span><span class="w">
       </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"deal"</span><span class="p">,</span><span class="w">
       </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"北京直飞南极8天8晚签证"</span><span class="p">,</span><span class="w">
-      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"qz"</span><span class="p">,</span><span class="w">
       </span><span class="err">departureTime</span><span class="p">:</span><span class="w"> </span><span class="s2">"3月 4月 6月 7月 8月 9月 10月 11月 12月"</span><span class="p">,</span><span class="w">
       </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;em&gt;7899&lt;/em&gt;元起"</span><span class="p">,</span><span class="w">
       </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/10121/?source=app"</span><span class="p">,</span><span class="w">
@@ -423,7 +601,7 @@
       </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="mi">9991</span><span class="p">,</span><span class="w">
       </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"deal"</span><span class="p">,</span><span class="w">
       </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"上海直飞毛里求斯8天5晚自由行"</span><span class="p">,</span><span class="w">
-      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"diyTour"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"free"</span><span class="p">,</span><span class="w">
       </span><span class="err">departureTime</span><span class="p">:</span><span class="w"> </span><span class="s2">"3月 4月 5月"</span><span class="p">,</span><span class="w">
       </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;em&gt;99999&lt;/em&gt;元起"</span><span class="p">,</span><span class="w">
       </span><span class="err">href</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/9991/?source=app"</span><span class="p">,</span><span class="w">
@@ -552,61 +730,61 @@
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1016</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fightTicket"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"flights"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"机票"</span><span class="w">
             </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"机票"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1017</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotel"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotels"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"酒店"</span><span class="w">
             </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"酒店"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1018</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"diyTour"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"free"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"自由行"</span><span class="w">
             </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"自由行"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1020</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ship"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cruise"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"邮轮"</span><span class="w">
             </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"邮轮"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1785</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qz"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"签证"</span><span class="w">
             </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"签证"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1983</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localTour"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"local"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"当地游"</span><span class="w">
             </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"当地游"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1049</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"insurance"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"safe"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"保险"</span><span class="w">
             </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"保险"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1021</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"carRental"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"car"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"租车"</span><span class="w">
             </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"租车"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2161</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"euroTrainTicket"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ot"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"欧铁票"</span><span class="w">
             </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"欧铁票"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1050</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ticketEtc"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"other"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"catename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"门票及其他"</span><span class="w">
             </span><span class="s2">"_comment"</span><span class="err">:</span><span class="w"> </span><span class="s2">"门票及其他"</span><span class="w">
         </span><span class="p">}</span><span class="w">
