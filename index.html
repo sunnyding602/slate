@@ -2571,6 +2571,169 @@ buy_limit_new -user_sum_new > 0 可购买
 </tr>
 </tbody></table>
 
+<h2 id="收藏列表">收藏列表</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/favor_list"</span> -d <span class="s2">"oauth_token=0366efc7d448302c1324eaa646200139&amp;client_secret=44c86dbde623340b5e0a&amp;client_id=qyer_discount_ios&amp;track_app_version=1.6.4&amp;is_show_supplier=1&amp;is_show_pay=1&amp;track_os=ios%25208.3&amp;app_installtime=1421109485&amp;track_app_channel=App%2520Store&amp;track_deviceid=E04B18E6-BEFE-4749-8B67-39C0162175D2&amp;track_user_id=5287911&amp;track_device_info=ios%2520device&amp;page_size=1000"</span>
+</code></pre>
+
+<blockquote>
+<p>成功返回:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="mi">10152</span><span class="p">,</span><span class="w">
+      </span><span class="err">pic</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/supplier/lastminute/2014/09/28/14118861155238/600x400"</span><span class="p">,</span><span class="w">
+      </span><span class="err">title</span><span class="p">:</span><span class="w"> </span><span class="s2">"预上线查看状态"</span><span class="p">,</span><span class="w">
+      </span><span class="err">detail</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;em&gt;1&lt;/em&gt;元起"</span><span class="p">,</span><span class="w">
+      </span><span class="err">firstpay_end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1443369600"</span><span class="p">,</span><span class="w">
+      </span><span class="err">booktype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="err">end_date</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015.09.28结束"</span><span class="p">,</span><span class="w">
+      </span><span class="err">buy_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="err">list_price</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="err">self_use</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="err">first_pub</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="err">perperty_lab_auth</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="err">perperty_today_new</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="err">lastminute_des</span><span class="p">:</span><span class="w"> </span><span class="s2">"10折"</span><span class="p">,</span><span class="w">
+      </span><span class="err">url</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/10152?source=app"</span><span class="p">,</span><span class="w">
+      </span><span class="err">imgUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://pic.qyer.com/public/supplier/lastminute/2014/09/28/14118861155238/600x400"</span><span class="p">,</span><span class="w">
+      </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="s2">"deal"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productType</span><span class="p">:</span><span class="w"> </span><span class="s2">"1017"</span><span class="p">,</span><span class="w">
+      </span><span class="err">productTypeEngDesc</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotels"</span><span class="p">,</span><span class="w">
+      </span><span class="err">departureTime</span><span class="p">:</span><span class="w"> </span><span class="s2">"四月,五月,六月,七月,八月,九月"</span><span class="p">,</span><span class="w">
+      </span><span class="err">stock</span><span class="p">:</span><span class="w"> </span><span class="mi">3031</span><span class="p">,</span><span class="w">
+      </span><span class="err">end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1443369600"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://open.qyer.com/lastminute/favor_list</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必须</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>client_id</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端id</td>
+</tr>
+<tr>
+<td><strong>client_secret</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端密码</td>
+</tr>
+<tr>
+<td><strong>oauth_token</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
+</tr>
+<tr>
+<td>size</td>
+<td>String</td>
+<td>是</td>
+<td>750x600</td>
+<td>宽x高</td>
+</tr>
+<tr>
+<td>is_show_pay</td>
+<td>Int</td>
+<td>否</td>
+<td>空</td>
+<td>int 是否显示订单类</td>
+</tr>
+<tr>
+<td>max_id</td>
+<td>Int</td>
+<td>否</td>
+<td>0</td>
+<td>本页最大id 默认值0,指第一页</td>
+</tr>
+<tr>
+<td>page_size</td>
+<td>Int</td>
+<td>否</td>
+<td>10</td>
+<td>页大小 默认值10</td>
+</tr>
+<tr>
+<td>is_show_supplier</td>
+<td>Int</td>
+<td>否</td>
+<td>0</td>
+<td>显示供应商创建的折扣 默认值 0:不显示供应商的 1:显示全部</td>
+</tr>
+<tr>
+<td><em>track_user_id</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>用户UID，未登录传空。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_deviceid</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_version</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>当前版本。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_channel</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>安装渠道。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_device_info</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备型号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_os</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>操作系统和版本号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>app_installtime</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>APP安装时间。（数据中心用）</td>
+</tr>
+</tbody></table>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
