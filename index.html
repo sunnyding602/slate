@@ -2850,7 +2850,7 @@ buy_limit_new -user_sum_new > 0 可购买
 <td>Int</td>
 <td>否</td>
 <td>0</td>
-<td>本页最大id 默认值0,指第一页</td>
+<td>传参时max_id 请取id中最小的一个, 目前以id从大到小排列~也就是最后一个</td>
 </tr>
 <tr>
 <td>page_size</td>
@@ -2916,6 +2916,14 @@ buy_limit_new -user_sum_new > 0 可购买
 <td>APP安装时间。（数据中心用）</td>
 </tr>
 </tbody></table>
+
+<aside class="notice">
+传参时max_id 请取id中最小的一个, 目前以id从大到小排列~也就是最后一个.
+</aside>
+
+<aside class="notice">
+旧版App的做法是直接page_size给1000, 然后就不用分页了 :(, 请不要这么做.
+</aside>
 
 <h2 id="退款查询接口">退款查询接口</h2>
 <pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_post_query_refund"</span> -d <span class="s2">"oauth_token=0366efc7d448302c1324eaa646200139&amp;client_secret=44c86dbde623340b5e0a&amp;client_id=qyer_discount_ios&amp;track_app_version=1.6.4&amp;is_show_supplier=1&amp;is_show_pay=1&amp;track_os=ios%25208.3&amp;app_installtime=1421109485&amp;track_app_channel=App%2520Store&amp;track_deviceid=E04B18E6-BEFE-4749-8B67-39C0162175D2&amp;track_user_id=5287911&amp;track_device_info=ios%2520device&amp;order_id=1996794562"</span>
