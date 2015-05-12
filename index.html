@@ -2438,6 +2438,131 @@ buy_limit_new -user_sum_new > 0 可购买
 </tr>
 </tbody></table>
 
+<h2 id="删除当前用户常用旅客信息接口">删除当前用户常用旅客信息接口</h2>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_delete_traveler_info?oauth_token=84810f19e02034c13596b2469c540aa9&amp;client_secret=44c86dbde623340b5e0a&amp;client_id=qyer_discount_ios&amp;track_app_version=1.6.3&amp;track_os=ios%25208.3&amp;app_installtime=1421109485&amp;track_app_channel=App%2520Store&amp;track_deviceid=E04B18E6-BEFE-4749-8B67-39C0162175D2&amp;track_user_id=5287911&amp;track_device_info=ios%2520device&amp;id=28"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">"删除成功"</span><span class="p">,</span><span class="w">
+    </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="mi">20001</span><span class="p">,</span><span class="w">
+    </span><span class="err">info</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_id或client_secret参数无效"</span><span class="p">,</span><span class="w">
+    </span><span class="err">times</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="err">data</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://open.qyer.com/lastminute/app_delete_traveler_info</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必须</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>client_id</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端id</td>
+</tr>
+<tr>
+<td><strong>client_secret</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>Open平台客户端密码</td>
+</tr>
+<tr>
+<td><strong>oauth_token</strong></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>采用OAuth授权方式为必填参数， OAuth授权后获得。</td>
+</tr>
+<tr>
+<td><em><code class="prettyprint">id</code></em></td>
+<td>Int</td>
+<td>是</td>
+<td>空</td>
+<td>traveler_id要删除的旅客的id</td>
+</tr>
+<tr>
+<td><em>source</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>进入折扣详情页的类名，用于数据中心统计（例如：LastMinuteViewController进入，source=LastMinuteViewController）</td>
+</tr>
+<tr>
+<td><em>track_user_id</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>用户UID，未登录传空。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_deviceid</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_version</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>当前版本。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_app_channel</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>安装渠道。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_device_info</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>设备型号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>track_os</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>操作系统和版本号。（数据中心用）</td>
+</tr>
+<tr>
+<td><em>app_installtime</em></td>
+<td>String</td>
+<td>否</td>
+<td>空</td>
+<td>APP安装时间。（数据中心用）</td>
+</tr>
+</tbody></table>
+
 <h2 id="提交订单v2接口15年4月13日">提交订单v2接口15年4月13日</h2>
 <pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_post_orderform_secure_vtwo"</span> -d <span class="s2">"oauth_token=84810f19e02034c13596b2469c540aa9&amp;client_secret=44c86dbde623340b5e0a&amp;client_id=qyer_discount_ios&amp;track_os=ios%25208.3&amp;track_deviceid=E04B18E6-BEFE-4749-8B67-39C0162175D2&amp;a=at54&amp;track_device_info=ios%2520device&amp;b=6a93816924508c1a201e89273ea2010b&amp;track_app_version=1.6.3&amp;cid=6322&amp;email=sunnyding602%40qq.com&amp;track_app_channel=App%2520Store&amp;app_installtime=1421109485&amp;price=1.00&amp;num=1&amp;name=%E4%B8%81%E6%B6%A6%E8%A5%BF&amp;phone=18500192023&amp;track_user_id=5287911&amp;isadult[0]=1&amp;sex[0]=1&amp;firstname[0]=润西&amp;firstname_en[0]=runxi&amp;lastname[0]=ding&amp;lastname_en[0]=ding&amp;identity_type[0]=2&amp;identity_num[0]=61022119890522222X&amp;identity_type[0]=2&amp;identity_validity[0]=2017-08-08&amp;birth_place[0]=beijing&amp;birthday[0]=1989-05-30&amp;identity_place[0]=西安"</span>
 </code></pre>
