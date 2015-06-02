@@ -2031,9 +2031,32 @@ _comment字段中的数据仅仅是注释, 请勿使用
         </span><span class="err">app_secondpay_start_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"1429200000"</span><span class="p">,</span><span class="w">
         </span><span class="err">app_secondpay_end_time</span><span class="p">:</span><span class="w"> </span><span class="s2">"2145888000"</span><span class="p">,</span><span class="w">
         </span><span class="err">app_stock</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="err">m_qyer_url</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/10232/"</span><span class="w">
+        </span><span class="err">m_qyer_url</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://m.qyer.com/z/deal/10232/"</span><span class="p">,</span><span class="w">
+        </span><span class="err">status_v2</span><span class="p">:</span><span class="w"> </span><span class="s2">"onsale"</span><span class="p">,</span><span class="w">
+        </span><span class="err">status_v2_desc</span><span class="p">:</span><span class="w"> </span><span class="s2">"售卖中"</span><span class="p">,</span><span class="w">
+        </span><span class="err">is_on_sale</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="err">is_expired</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="err">server_time</span><span class="p">:</span><span class="w"> </span><span class="mi">1433241642</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
+
+
+</span><span class="err">//判断当前折扣状态代码示例</span><span class="w">
+  </span><span class="err">if($is_expired)</span><span class="p">{</span><span class="w">
+      </span><span class="err">//已经结束</span><span class="w">
+  </span><span class="err">}elseif(</span><span class="w"> </span><span class="err">$info.booktype</span><span class="w"> </span><span class="err">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">&amp;&amp;</span><span class="w"> </span><span class="err">$stock</span><span class="w"> </span><span class="err">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="err">)</span><span class="p">{</span><span class="w">
+      </span><span class="err">//卖光了</span><span class="w">
+  </span><span class="err">}elseif($info.pay_time</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="err">$server_time</span><span class="w"> </span><span class="err">||</span><span class="w"> </span><span class="err">!$is_on_sale)</span><span class="p">{</span><span class="w">
+      </span><span class="err">//还没开始</span><span class="w">
+  </span><span class="err">}else</span><span class="p">{</span><span class="w">
+      </span><span class="err">//</span><span class="w"> </span><span class="err">这里APP应该判断order_info</span><span class="w"> </span><span class="err">和</span><span class="w"> </span><span class="err">order_value字段</span><span class="w">
+      </span><span class="err">if</span><span class="w"> </span><span class="err">($info.booktype</span><span class="w"> </span><span class="err">==</span><span class="w"> </span><span class="err">1){</span><span class="w">
+          </span><span class="err">//立即购买</span><span class="w">
+      </span><span class="err">}elseif($order_url)</span><span class="p">{</span><span class="w">
+          </span><span class="err">//链接类产品</span><span class="w">
+      </span><span class="err">}</span><span class="w">
+  </span><span class="err">}</span><span class="w">
+
 </span></code></pre>
 
 <h3 id="http-request">HTTP Request</h3>
