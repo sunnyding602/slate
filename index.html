@@ -1944,7 +1944,8 @@ _comment字段中的数据仅仅是注释, 请勿使用
         </span><span class="err">product_type</span><span class="p">:</span><span class="w"> </span><span class="s2">"1983"</span><span class="p">,</span><span class="w">
         </span><span class="err">recommend</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
         </span><span class="err">views</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-        </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span><span class="p">,</span><span class="w">
+        </span><span class="err">statusDesc</span><span class="p">:</span><span class="w"> </span><span class="s2">"人工下架"</span><span class="p">,</span><span class="w">
         </span><span class="err">onsale</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="err">booktype</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
         </span><span class="err">supplierid</span><span class="p">:</span><span class="w"> </span><span class="s2">"1860"</span><span class="p">,</span><span class="w">
@@ -2157,6 +2158,87 @@ buy_limit_new -user_sum_new > 0 可购买
 <td>APP安装时间。（数据中心用）</td>
 </tr>
 </tbody></table>
+
+<table><thead>
+<tr>
+<th>折扣状态id(status)</th>
+<th>折扣状态描述(statusDesc)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>draft</td>
+<td>待提交审核</td>
+</tr>
+<tr>
+<td>bd</td>
+<td>待BD审核</td>
+</tr>
+<tr>
+<td>ed</td>
+<td>待编辑审核</td>
+</tr>
+<tr>
+<td>back</td>
+<td>审核未通过</td>
+</tr>
+<tr>
+<td>edback</td>
+<td>审核未通过</td>
+</tr>
+<tr>
+<td>supplierverify</td>
+<td>商家自审</td>
+</tr>
+<tr>
+<td>presale</td>
+<td>预上线</td>
+</tr>
+<tr>
+<td>onsale</td>
+<td>售卖中</td>
+</tr>
+<tr>
+<td>soldout</td>
+<td>售罄</td>
+</tr>
+<tr>
+<td>onsale</td>
+<td>售卖中</td>
+</tr>
+<tr>
+<td>sysoff</td>
+<td>系统下架</td>
+</tr>
+<tr>
+<td>off</td>
+<td>人工下架</td>
+</tr>
+<tr>
+<td>del</td>
+<td>删除</td>
+</tr>
+<tr>
+<td>未知状态</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+  if($is_expired){
+      //已经结束
+  }elseif( $info.booktype == 1 && $stock <= 0){
+      //卖光了
+  }elseif($info.pay_time > $server_time || !$is_on_sale){
+      //还没开始
+  }else{
+      // 这里APP应该判断order_info 和 order_value字段
+      if ($info.booktype == 1){
+          //立即购买
+      }elseif($order_url){
+          //链接类产品
+      }
+  }
+</aside>
 
 <h2 id="获取当前用户常用旅客信息接口">获取当前用户常用旅客信息接口</h2>
 <pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_get_traveler_info?oauth_token=84810f19e02034c13596b2469c540aa9&amp;client_secret=44c86dbde623340b5e0a&amp;client_id=qyer_discount_ios&amp;track_app_version=1.6.3&amp;track_os=ios%25208.3&amp;app_installtime=1421109485&amp;track_app_channel=App%2520Store&amp;track_deviceid=E04B18E6-BEFE-4749-8B67-39C0162175D2&amp;track_user_id=5287911&amp;track_device_info=ios%2520device"</span>
