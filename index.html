@@ -294,11 +294,33 @@
 推送相关
 </aside>
 
-<p>type | uri | 原生? | 描述
-&mdash;&mdash;&mdash; |&mdash;&mdash;&mdash;<br>
-app|lastminute://detail?id=37|YES|以原生的方式呈现产品id为37的折扣详情, app调用get_detail?id=37接口
-app|lastminute://topic?id=1234|YES|以原生的方式呈现专题id为1234的专题列表, app调用get_topic_by_id?id=1234接口
-url|http://m.qyer.com|NO|在内置浏览器里打开uri</p>
+<table><thead>
+<tr>
+<th>type</th>
+<th>uri</th>
+<th>原生?</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>app(应用内打开,原生)</td>
+<td>lastminute://detail?id=37</td>
+<td>YES</td>
+<td>以原生的方式呈现产品id为37的折扣详情, app调用get_detail?id=37接口</td>
+</tr>
+<tr>
+<td>app(应用内打开,原生)</td>
+<td>lastminute://topic?id=1234</td>
+<td>YES</td>
+<td>以原生的方式呈现专题id为1234的专题列表, app调用get_topic_by_id?id=1234接口</td>
+</tr>
+<tr>
+<td>url(应用内浏览器打开,webview)</td>
+<td>http://m.qyer.com</td>
+<td>NO</td>
+<td>在内置浏览器里打开uri</td>
+</tr>
+</tbody></table>
 
 <aside class="notice">
 webview中支持链接信息
