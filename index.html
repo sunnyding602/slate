@@ -320,7 +320,7 @@
 </tr>
 </tbody></table>
 
-<h1 id="webview中支持链接信息">webview中支持链接信息</h1>
+<h1 id="webview中链接的打开方式">webview中链接的打开方式</h1>
 
 <h2 id="原生-折扣详情:-强烈推荐使用正则匹配..-别用问号截取字符串了">原生 折扣详情:  强烈推荐使用正则匹配..  别用问号截取字符串了</h2>
 
@@ -328,51 +328,59 @@
 <tr>
 <th>NO.</th>
 <th>url</th>
+<th>是否原生</th>
+<th>处理方式</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>1</td>
-<td>http://appview.qyer.com/z/deal/</td>
+<td>http://appview.qyer.com/z/deal/37</td>
+<td>YES</td>
+<td>正则匹配折扣id 37 ,app访问get_detail接口,以原生形式呈现折扣商品</td>
 </tr>
 <tr>
 <td>2</td>
-<td>http://www.qyer.com/lastminute/deal/</td>
+<td>http://www.qyer.com/lastminute/deal/37</td>
+<td>YES</td>
+<td>正则匹配折扣id 37 ,app访问get_detail接口,以原生形式呈现折扣商品</td>
 </tr>
 <tr>
 <td>3</td>
-<td>http://m.qyer.com/lastminute/deal/</td>
+<td>http://m.qyer.com/lastminute/deal/37</td>
+<td>YES</td>
+<td>正则匹配折扣id 37 ,app访问get_detail接口,以原生形式呈现折扣商品</td>
 </tr>
 <tr>
 <td>4</td>
-<td>http://m.qyer.com/z/deal/32</td>
+<td>http://m.qyer.com/z/deal/37</td>
+<td>YES</td>
+<td>正则匹配折扣id 37 ,app访问get_detail接口,以原生形式呈现折扣商品</td>
 </tr>
 <tr>
 <td>5</td>
-<td>http://z.qyer.com/deal/</td>
+<td>http://z.qyer.com/deal/37</td>
+<td>YES</td>
+<td>正则匹配折扣id 37 ,app访问get_detail接口,以原生形式呈现折扣商品</td>
 </tr>
-</tbody></table>
-
-<h2 id="内置浏览器打开">内置浏览器打开</h2>
-
-<table><thead>
 <tr>
-<th>NO.</th>
-<th>url</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>1</td>
+<td>6</td>
 <td>m.qyer.com</td>
+<td>NO</td>
+<td>以webview打开host是m.qyer.com的链接</td>
 </tr>
 <tr>
-<td>2</td>
-<td>非m.qyer.com 其他链接用外置浏览器打开</td>
+<td>7</td>
+<td>非m.qyer.com</td>
+<td>NO</td>
+<td>以外置浏览器打开host是非m.qyer.com的链接</td>
+</tr>
+<tr>
+<td>8</td>
+<td>lastminute://tel:400123456</td>
+<td>YES</td>
+<td>点着链接能打电话, 电话伪协议链接</td>
 </tr>
 </tbody></table>
-
-<h2 id="电话伪协议链接">电话伪协议链接</h2>
-
-<p>lastminute://tel:400123456</p>
 
 <h1 id="折扣app">折扣App</h1>
 
