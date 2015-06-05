@@ -290,6 +290,37 @@
 右边的json并没有用!!!
 </aside>
 
+<aside class="notice">
+推送相关
+</aside>
+
+<p>type | uri | 原生? | 描述
+&mdash;&mdash;&mdash; |&mdash;&mdash;&mdash;<br>
+app|lastminute://detail?id=37|YES|以原生的方式呈现产品id为37的折扣详情, app调用get_detail?id=37接口
+app|lastminute://topic?id=1234|YES|以原生的方式呈现专题id为1234的专题列表, app调用get_topic_by_id?id=1234接口
+url|http://m.qyer.com|NO|在内置浏览器里打开uri</p>
+
+<aside class="notice">
+webview中支持链接信息
+</aside>
+
+<h2 id="原生-折扣详情:-强烈推荐使用正则匹配..-别用问号截取字符串了">原生 折扣详情:  强烈推荐使用正则匹配..  别用问号截取字符串了</h2>
+
+<p>http://appview.qyer.com/z/deal/
+http://www.qyer.com/lastminute/deal/
+http://m.qyer.com/lastminute/deal/
+http://m.qyer.com/z/deal/32
+http://z.qyer.com/deal/</p>
+
+<h2 id="内置浏览器打开">内置浏览器打开</h2>
+
+<p>1 m.qyer.com/
+2 非m.qyer.com 其他链接用外置浏览器打开</p>
+
+<h2 id="电话伪协议链接">电话伪协议链接</h2>
+
+<p>lastminute://tel:400123456</p>
+
 <h1 id="折扣app">折扣App</h1>
 
 <h2 id="获取幻灯,产品分类,热门专题-首页">获取幻灯,产品分类,热门专题-首页</h2>
