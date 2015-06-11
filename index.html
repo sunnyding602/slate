@@ -1937,35 +1937,42 @@ _comment字段中的数据仅仅是注释, 请勿使用
 <td><code class="prettyprint">continent_id</code></td>
 <td>int</td>
 <td>否</td>
-<td>10</td>
+<td>0</td>
 <td>大洲id</td>
 </tr>
 <tr>
 <td><code class="prettyprint">country_id</code></td>
 <td>int</td>
 <td>否</td>
-<td>10</td>
+<td>0</td>
 <td>国家id</td>
+</tr>
+<tr>
+<td><code class="prettyprint">city_id</code></td>
+<td>int</td>
+<td>是</td>
+<td>0</td>
+<td>城市id  小海记得传这个字段给我~~!</td>
 </tr>
 <tr>
 <td><code class="prettyprint">departure</code></td>
 <td>string</td>
 <td>否</td>
-<td>10</td>
+<td>0</td>
 <td>出发城市</td>
 </tr>
 <tr>
 <td><code class="prettyprint">orderName</code></td>
 <td>string</td>
 <td>否</td>
-<td>10</td>
+<td>0</td>
 <td>排序值对应的排序名称 格式:recommend/id/edittime</td>
 </tr>
 <tr>
 <td><code class="prettyprint">orderValue</code></td>
 <td>string</td>
 <td>否</td>
-<td>10</td>
+<td>0</td>
 <td>当前列表排序值 格式:推荐值/id值/更新时间戳值 (当页最后一个折扣的推荐值、id值、更新时间值)</td>
 </tr>
 <tr>
@@ -3347,6 +3354,8 @@ buy_limit_new -user_sum_new > 0 可购买
           </span><span class="err">complaints_hotline</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678"</span><span class="p">,</span><span class="w">
           </span><span class="err">work_hours</span><span class="p">:</span><span class="w"> </span><span class="s2">"周一至周五9:00-18:00"</span><span class="p">,</span><span class="w">
           </span><span class="err">refound_reason</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+          </span><span class="err">refund_reason</span><span class="p">:</span><span class="w"> </span><span class="s2">"退款原因"</span><span class="p">,</span><span class="w">
+          </span><span class="err">refund_desc</span><span class="p">:</span><span class="w"> </span><span class="s2">"退款说明"</span><span class="p">,</span><span class="w">
           </span><span class="err">feedback</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
       </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -3470,7 +3479,7 @@ refund_status  退款状态，1：申请退款，2：批准退款，3：拒绝�
 </aside>
 
 <h2 id="提交退款申请">提交退款申请</h2>
-<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_post_apply_refund"</span> -d <span class="s2">"oauth_token=0366efc7d448302c1324eaa646200139&amp;client_secret=44c86dbde623340b5e0a&amp;client_id=qyer_discount_ios&amp;track_app_version=1.6.4&amp;is_show_supplier=1&amp;is_show_pay=1&amp;track_os=ios%25208.3&amp;app_installtime=1421109485&amp;track_app_channel=App%2520Store&amp;track_deviceid=E04B18E6-BEFE-4749-8B67-39C0162175D2&amp;track_user_id=5287911&amp;track_device_info=ios%2520device&amp;order_id=1996794562&amp;remark=我奏似要退款"</span>
+<pre><code class="highlight shell">curl <span class="s2">"http://open.qyer.com/lastminute/app_post_apply_refund"</span> -d <span class="s2">"oauth_token=0366efc7d448302c1324eaa646200139&amp;client_secret=44c86dbde623340b5e0a&amp;client_id=qyer_discount_ios&amp;track_app_version=1.6.4&amp;is_show_supplier=1&amp;is_show_pay=1&amp;track_os=ios%25208.3&amp;app_installtime=1421109485&amp;track_app_channel=App%2520Store&amp;track_deviceid=E04B18E6-BEFE-4749-8B67-39C0162175D2&amp;track_user_id=5287911&amp;track_device_info=ios%2520device&amp;order_id=1996794562&amp;remark=退款原因&amp;refund_desc=退款说明"</span>
 </code></pre>
 
 <blockquote>
@@ -3546,7 +3555,14 @@ refund_status  退款状态，1：申请退款，2：批准退款，3：拒绝�
 <td>String</td>
 <td>是</td>
 <td>空</td>
-<td>退款理由</td>
+<td>退款原因</td>
+</tr>
+<tr>
+<td><code class="prettyprint">refund_desc</code></td>
+<td>String</td>
+<td>是</td>
+<td>空</td>
+<td>退款说明</td>
 </tr>
 <tr>
 <td><em>track_user_id</em></td>
